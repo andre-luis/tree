@@ -8,5 +8,7 @@ class Node < ActiveRecord::Base
     has_many :nodes, :foreign_key => "id_mother"
     has_many :nodes, :foreign_key => "id_father"
 
+    validates :name, presence: true
+
 
 end
