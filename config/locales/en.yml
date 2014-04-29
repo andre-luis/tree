@@ -24,6 +24,10 @@ en:
   create_account: "create account"
   error: "error"
   repeat_password_here: repeat password here
+  user_created: "user created, you may login"
+  login: login
+
+  login_failure_msg: "There was a problem logging in. Please check your email and password."
 
   form_error_msg: 
     one: "1 error need correction"

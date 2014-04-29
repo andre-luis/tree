@@ -4,6 +4,10 @@ pt:
   new_user: "novo usuário"
   error: "erro"
   repeat_password_here: repita a senha aqui
+  user_created: "usuário criado, pode logar"
+  login: login
+
+  login_failure_msg: "Problemas com seu login. Por favor, verifique seu email e senha."
 
   form_error_msg: 
     one: "1 erro precisa ser corrigido para o cadastro ser efetuado"

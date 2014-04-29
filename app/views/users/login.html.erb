@@ -1,1 +1,30 @@
+<% if !flash.empty? %>
+<div id="flash"> 
+    <% flash.keys.each do |k| %> 
+        <div class="<%= k %>">
+            <%= flash[k] %>
+        </div>  
+    <% end %>   
+</div>
+<% end %>
+
+<%= form_for @user, builder: CapitalFormBuilder, url: {controller: "user_sessions", action: "create"}, html: {class: "login"} do |f| %>
+
+
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t("login").capitalize %>
+  </div>
+<% end %>
+
+
 <%= link_to "Crie sua conta", new_user_path, id:  "sign-in" %><br>

@@ -14,13 +14,38 @@ class User < ActiveRecord::Base
 
   	before_save :downcase_email, :encrypt_pass
 
-  	def downcase_email
-    	self.email = email.downcase
-  	end	
+    def authenticate(pw)
+      if (self.password_digest)
+        User.encrypt(pw, get_encrypt_time) == self.password_digest
+      else
+        false
+      end
+    end
 
+    private
+    def get_encrypt_time
+      self.password_digest[40, self.password_digest.length-40]
+    end
+ 
     def encrypt_pass
-      # TODO: use a HASH and a Salt to store password
-      self.password_digest = password
+      self.password_digest = User.encrypt(password)
+    end
+
+    def downcase_email
+      self.email = email.downcase
+    end 
+
+
+
+
+    def self.encrypt(pw, time=nil)
+      time ||= Time.now.to_s
+      Digest::SHA1.hexdigest(pw+User.salt(time)) + time
+    end
+
+
+    def self.salt(time)
+      Digest::SHA1.hexdigest(time.to_s)
     end
 
 

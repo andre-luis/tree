@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  post 'user_sessions/create', to: "user_sessions#create"
+
   resources :users
 
   get "/trees", to: "trees#index", as: "trees"
