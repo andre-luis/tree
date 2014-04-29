@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
 
+  resources :users
+
   get "/trees", to: "trees#index", as: "trees"
   get "/trees/getNodes", to: "trees#getNodes", as: "getNodes"
+
+  root "users#login"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

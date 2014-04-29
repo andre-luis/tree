@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  create_account: "create account"
+  error: "error"
+  repeat_password_here: repeat password here
+
+  form_error_msg: 
+    one: "1 error need correction"
+    other: "%{count} erros need correction"

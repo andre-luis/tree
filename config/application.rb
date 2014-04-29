@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+require File.expand_path('../../lib/capital_form_builder', __FILE__)
+
 module Tree
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -18,6 +20,6 @@ module Tree
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    # config.i18n.default_locale = :pt
   end
 end

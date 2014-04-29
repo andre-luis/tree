@@ -1,0 +1,33 @@
+<%= form_for @user, builder: CapitalFormBuilder do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= t :form_error_msg, count: @user.errors.count %></h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message.capitalize %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation, placeholder: t("repeat_password_here") %>
+  </div>
+  <div class="actions">
+    <%= f.submit t("create_account").capitalize %>
+  </div>
+<% end %>
