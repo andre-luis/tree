@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 
 	attr_accessor :password, :password_confirmation
 
+  has_many :gen_trees
+
 	validates :name, presence: true
   validates :email, presence: true,
                     uniqueness: true,

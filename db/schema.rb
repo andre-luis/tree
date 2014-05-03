@@ -11,29 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140428193227) do
+ActiveRecord::Schema.define(version: 20140503154027) do
 
-  create_table "logins", force: true do |t|
-    t.string   "alias"
-    t.string   "email"
-    t.string   "password"
-    t.string   "hint"
+  create_table "gen_trees", force: true do |t|
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "nodes", force: true do |t|
     t.string   "name"
     t.string   "surname"
     t.integer  "sex"
-    t.integer  "id_father"
-    t.integer  "id_mother"
+    t.integer  "father_id"
+    t.integer  "mother_id"
     t.integer  "birth"
     t.string   "picture"
     t.boolean  "isMain"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "gen_trees_id"
   end
+
+  add_index "nodes", ["gen_trees_id"], name: "index_nodes_on_gen_trees_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
