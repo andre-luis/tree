@@ -1,0 +1,20 @@
+<h1><%= t "trees_from", user: @user.name %></h1>
+
+<% trees = @user.gen_trees
+   unless trees.empty? %>
+    <ul>
+<%   trees.each do |tree| %>
+    <li><%= link_to tree.name, tree %></li>
+<% end %>
+    </ul>
+<% else %>
+    <div><%= t "no_trees_msg" %></div>
+<% end %>
+
+<%= link_to t("create_tree"), new_gen_tree_path %>
+
+
+
+
+
+

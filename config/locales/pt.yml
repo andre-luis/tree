@@ -6,8 +6,13 @@ pt:
   repeat_password_here: repita a senha aqui
   user_created: "usuário criado, pode logar"
   login: login
+  security_breach_msg: "Você tem que logar primeiro!"
 
   login_failure_msg: "Problemas com seu login. Por favor, verifique seu email e senha."
+
+  trees_from: "Árvores de %{user}"
+  no_trees_msg: "Não há árvores ainda aqui"
+  create_tree: "Criar uma nova árvore"
 
   form_error_msg: 
     one: "1 erro precisa ser corrigido para o cadastro ser efetuado"

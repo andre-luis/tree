@@ -7,10 +7,10 @@ class Node < ActiveRecord::Base
 
 	belongs_to :father, :class_name => "Node", :foreign_key => 'father_id'
 	belongs_to :mother, :class_name => "Node", :foreign_key => 'mother_id'
-    has_many :nodes, :foreign_key => "mother_id"
-    has_many :nodes, :foreign_key => "father_id"
+  has_many :nodes, :foreign_key => "mother_id"
+  has_many :nodes, :foreign_key => "father_id"
 
-    validates :name, presence: true
+  validates :name, presence: true
 
 
 end

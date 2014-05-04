@@ -4,7 +4,7 @@ class UserSessionsController < ApplicationController
     if user && user.authenticate(params[:user][:password])
       session[:user_id] = user.id
       #flash[:success] = "Thanks for logging in!"
-      redirect_to trees_path
+      redirect_to gen_trees_path
     else
       logger.info params.inspect
       if user

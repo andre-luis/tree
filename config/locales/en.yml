@@ -26,9 +26,21 @@ en:
   repeat_password_here: repeat password here
   user_created: "user created, you may login"
   login: login
-
+  security_breach_msg: "You must login first!"
   login_failure_msg: "There was a problem logging in. Please check your email and password."
-
+  trees_from: "Trees from %{user}"
+  no_trees_msg: "There are no trees yet here"
+  create_tree: "Create new tree"
   form_error_msg: 
     one: "1 error need correction"
     other: "%{count} erros need correction"
+
+  activerecord:
+    models:
+      user: user
+    attributes:
+      user:
+        name: name
+        email: e-mail
+        password: password
+        password_confirmation: confirmation

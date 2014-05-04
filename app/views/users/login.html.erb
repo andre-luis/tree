@@ -8,7 +8,7 @@
 </div>
 <% end %>
 
-<%= form_for @user, builder: CapitalFormBuilder, url: {controller: "user_sessions", action: "create"}, html: {class: "login"} do |f| %>
+<%= form_for @user, builder: ApplicationHelper::CapitalFormBuilder, url: {controller: "user_sessions", action: "create"}, html: {class: "login"} do |f| %>
 
 
 

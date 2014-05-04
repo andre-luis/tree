@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140503154027) do
+ActiveRecord::Schema.define(version: 20140503175209) do
 
   create_table "gen_trees", force: true do |t|
     t.integer  "user_id"
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 20140503154027) do
     t.boolean  "isMain"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "gen_trees_id"
+    t.integer  "gen_tree_id"
   end
 
-  add_index "nodes", ["gen_trees_id"], name: "index_nodes_on_gen_trees_id"
+  add_index "nodes", ["gen_tree_id"], name: "index_nodes_on_gen_tree_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
