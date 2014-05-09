@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140503175209) do
     t.integer  "gen_tree_id"
   end
 
-  add_index "nodes", ["gen_tree_id"], name: "index_nodes_on_gen_tree_id"
+  add_index "nodes", "gen_tree_id", name: "index_nodes_on_gen_tree_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
