@@ -3,7 +3,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require teste
+//= require_tree ./tree
+
 
 
 /*

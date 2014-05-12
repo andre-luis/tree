@@ -42,7 +42,7 @@ gem 'digest'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 
-gem 'spork', '~> 0.9.0.rc'
+gem 'spork-rails', '~> 4.0.0'
 
 
 group :development, :test do
