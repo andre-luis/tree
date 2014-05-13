@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list id="5961199a-f367-4460-8784-8309e5b64cbd" name="Default" comment="" />
-    <list default="true" id="542fed73-4609-4fef-9f02-aa14a231e84a" name="todo (cherry picked from commit 277773e)" comment="todo&#10;(cherry picked from commit 277773e)" />
+    <list default="true" id="542fed73-4609-4fef-9f02-aa14a231e84a" name="todo (cherry picked from commit 277773e)" comment="todo&#10;(cherry picked from commit 277773e)">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/tree.iml" afterPath="$PROJECT_DIR$/.idea/tree.iml" />
+    </list>
     <ignored path="tree.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -785,6 +787,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

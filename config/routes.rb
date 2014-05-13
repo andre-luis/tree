@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
 
 
-  post 'user_sessions/create', to: "user_sessions#create"
 
-  resources :users
-
-  get "/trees", to: "trees#index", as: "trees"
-  get "/trees/getNodes", to: "trees#getNodes", as: "getNodes"
 
   root "users#login"
+  resources :users, :gen_trees
+
+  post 'user_sessions/create', to: "user_sessions#create"
+  get "/gen_trees/:id/getNodes", to: "gen_trees#getNodes"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

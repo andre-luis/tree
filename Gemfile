@@ -41,6 +41,10 @@ gem 'digest'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
+
+gem 'spork-rails', '~> 4.0.0'
+
+
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
 end
